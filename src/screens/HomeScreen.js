@@ -1,7 +1,8 @@
-import { Text, View,Dimensions,StyleSheet  } from "react-native";
+import { Text, View,Dimensions,StyleSheet, ScrollView  } from "react-native";
 const SCREEN_WIDTH = Dimensions.get('window').width;
 import {colors,parameters} from "../global/styles";
 import { Icon } from "react-native-elements";
+import { StatusBar } from "expo-status-bar";
 
 const HomeScreen = () => {
     return (
@@ -16,6 +17,21 @@ const HomeScreen = () => {
                 />
             </View>
             </View>
+            <ScrollView bounces={false}>
+                <View style={styles.home}>
+                    <Text style={styles.text1}>Desress your commute</Text>
+                    <View style={styles.view1}>
+                        <View style={styles.view8}>
+                            <Text style={styles.text2}> Read a book.  take a nap. stare out the window</Text>
+                            <View style={styles.button1}>
+                                 <Text style={styles.text2}>Ride with uber</Text>
+                                 </View>
+                        </View>
+
+                    </View>
+                </View>
+            </ScrollView>
+            <StatusBar style="light"backgroundColor="#2058c0" translucent={true}/>
         </View>
     );
 };
@@ -47,46 +63,46 @@ const styles = StyleSheet.create({
     //         borderRadius:30,
     //       },
     
-    // home:{
-    //  backgroundColor:colors.blue,
-    //  paddingLeft:20,
+    home:{
+     backgroundColor:colors.blue,
+     paddingLeft:20,
      
-    // },
+    },
     
-    // text1:{
-    //  color:colors.white,
-    //  fontSize:21,
-    //  paddingBottom:20,
-    //  paddingTop:20
-    // },
+    text1:{
+     color:colors.white,
+     fontSize:21,
+     paddingBottom:20,
+     paddingTop:20
+    },
     
-    // text2:{
-    //  color:colors.white,
-    //  fontSize:16
-    // },
+    text2:{
+     color:colors.white,
+     fontSize:16
+    },
     
-    // view1:{
-    //  flexDirection:"row",
-    //  flex:1,
-    //  paddingTop:30
-    // },
+    view1:{
+     flexDirection:"row",
+     flex:1,
+     paddingTop:30
+    },
     
-    // button1:{
-    //   height:40,
-    //   width:150,
-    //   backgroundColor:colors.black,
-    //   borderRadius:20,
-    //   alignItems:"center",
-    //   justifyContent:"center",
-    //   marginTop:20
-    // },
+    button1:{
+      height:40,
+      width:150,
+      backgroundColor:colors.black,
+      borderRadius:20,
+      alignItems:"center",
+      justifyContent:"center",
+      marginTop:20
+    },
     
-    // button1Text:{
-    //  color:colors.white,
-    //  fontSize:17,
-    //  marginTop:-2
+    button1Text:{
+     color:colors.white,
+     fontSize:17,
+     marginTop:-2
     
-    // },
+    },
     // card:{
     //  alignItems:"center",
     //  margin:SCREEN_WIDTH/22
@@ -111,10 +127,10 @@ const styles = StyleSheet.create({
     //         marginHorizontal:15
             
     //          },
-    // text3:{marginLeft:15,
-    //         fontSize:20,
-    //         color:colors.black
-    //   },
+    text3:{marginLeft:15,
+            fontSize:20,
+            color:colors.black
+      },
     
     // view4:{ flexDirection:"row",
     //         alignItems:"center",
@@ -171,14 +187,14 @@ const styles = StyleSheet.create({
            marginTop:5
           },
 
-    // view8: {flex:4,
-    //       marginTop:-25
-    //     } ,
-    // carsAround: {
-    // width: 28,
-    // height: 14,
+    view8: {flex:4,
+          marginTop:-25
+        } ,
+    carsAround: {
+    width: 28,
+    height: 14,
     
-    // }, 
+    }, 
     
     // location: {
     //   width: 16,
