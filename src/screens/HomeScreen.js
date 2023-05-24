@@ -4,6 +4,7 @@ import {colors,parameters} from "../global/styles";
 import { Icon } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
 import { filterData } from './../global/data';
+import MapView,{PROVIDER_GOOGLE} from "react-native-maps";
 
 const HomeScreen = () => {
     return (
@@ -140,6 +141,14 @@ const HomeScreen = () => {
                     </View>
                     {/* location section end*/}
                     <Text style={styles.text4}>Around You</Text>
+                    <View style={{alignItems:'center',justifyContent:'center'}}>
+                                <MapView
+                                // provider={PROVIDER_GOOGLE}
+                                style={styles.map}
+                                >
+                                    
+                                </MapView>
+                    </View>
             </ScrollView>
             <StatusBar style="light"backgroundColor="#2058c0" translucent={true}/>
         </View>
