@@ -20,7 +20,7 @@ const HomeScreen = () => {
             </View>
             </View>
             <ScrollView bounces={false}>
-                {/* banner section */}
+                {/* banner section start*/}
                 <View style={styles.home}>
                     <Text style={styles.text1}>Destress your commute</Text>
                     <View style={styles.view1}>
@@ -40,7 +40,8 @@ const HomeScreen = () => {
                     </View>
                    
                 </View>
-                {/* item section */}
+                {/* banner section end */}
+                {/* item section start*/}
                 <View>
                         <FlatList
                         numRows = {4}
@@ -63,8 +64,9 @@ const HomeScreen = () => {
 
                         />
                     </View>
+                    {/* item section end */}
 
-                    {/* where to section */}
+                    {/* where to section start*/}
                     <View style={styles.view3}>
                         <Text style={styles.text3}> Where To ?</Text>
                           <View style={styles.view4}> 
@@ -83,7 +85,9 @@ const HomeScreen = () => {
                             />
                             </View>      
                     </View>
-                    {/* location */}
+                     {/* where to section  end*/}
+
+                    {/* location section start*/}
                     <View style={styles.view5}> 
                         <View style={styles.view6}>
                             <View style={styles.view7}>
@@ -101,9 +105,41 @@ const HomeScreen = () => {
                              
                         </View>
                         <View>
-                            
+                        <Icon
+                            type="material-community"
+                            name ="chevron-right"
+                            color={colors.grey}
+                            size={26}
+                            />
                         </View>
                     </View>
+                    <View style={{...styles.view5,borderBottomWidth:0}}> 
+                        <View style={styles.view6}>
+                            <View style={styles.view7}>
+                            <Icon
+                            type="material-community"
+                            name ="map-marker"
+                            color={colors.black}
+                            size={22}
+                            />
+                            </View>
+                            <View>
+                            <Text style={{fontSize:18,color:colors.black}}> 30, Indira Road</Text>  
+                              <Text style={{color:colors.grey3}}> Farmgate, Dhaka</Text>
+                            </View>
+                             
+                        </View>
+                        <View>
+                        <Icon
+                            type="material-community"
+                            name ="chevron-right"
+                            color={colors.grey}
+                            size={26}
+                            />
+                        </View>
+                    </View>
+                    {/* location section end*/}
+                    <Text style={styles.text4}>Around You</Text>
             </ScrollView>
             <StatusBar style="light"backgroundColor="#2058c0" translucent={true}/>
         </View>
